@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int powerFun(int base, int power)
+{
+    if(power == 1)
+    {
+        return 2;
+    }
+    
+    base = base * powerFun(base, power-1);
+}
+int main()
+{
+    int base;
+    int power;
+    int result;
+
+    cout<<"Enter the base: ";
+    cin>>base;
+
+    cout<<"Enter the power: ";
+    cin>>power;
+
+    result = powerFun(base, power, 1);
+    cout<<result;
+    return 0;
+}
